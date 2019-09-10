@@ -1,0 +1,3 @@
+[submodule "bnfc"]
+	path = bnfc
+	url = https://github.com/BNFC/bnfc
