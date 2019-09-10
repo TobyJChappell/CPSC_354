@@ -1,3 +1,6 @@
 [submodule "bnfc"]
 	path = bnfc
 	url = https://github.com/BNFC/bnfc
+[submodule "programming-languages-2019"]
+	path = programming-languages-2019
+	url = https://github.com/alexhkurz/programming-languages-2019.git
