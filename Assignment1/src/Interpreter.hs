@@ -24,6 +24,7 @@ deriving instance Data Exp
 execCBN :: Program -> Exp
 execCBN (Prog e) = evalCBN e
 
+
 evalCBN :: Exp -> Exp
 evalCBN (EApp e1 e2) = case (evalCBN e1) of
     (EAbs i e1') -> evalCBN (subst i e2 e1')
@@ -35,14 +36,15 @@ evalCBN (EFix e) = evalCBN (EApp e (EFix e))
 evalCBN (EMinusOne e) = case (evalCBN e) of
     ENat0 -> ENat0
     (ENatS e) -> e
-evalCBN (ENatS e') = ENatS (evalCBN e')
 
-evalCBN (EHd e1) = case (evalCBN e1) of 
-    ENil -> ENil
+evalCBN (EHd e1) = case (evalCBN e1) of
+    ENil -> ENil  
     (ECons e1 e2) -> e1
+
 evalCBN (ETl e1) = case (evalCBN e1) of
-    ENil -> ENil
-    (ECons e1 e2) -> e2
+     ENil -> ENil
+     (ECons e1 e2) -> e2
+evalCBN (ENatS e') = ENatS (evalCBN e') 
 
 evalCBN x = x
 

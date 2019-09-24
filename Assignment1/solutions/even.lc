@@ -1,0 +1,5 @@
+let rec even = \x . \y . if x = # then y 
+                             else if y = 0 then even (tl x) S 0
+			     else even (tl x) 0 in
+
+even a1:a2:a3:a4:# (S 0)
