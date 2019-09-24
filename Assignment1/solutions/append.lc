@@ -1,4 +1,3 @@
-(\x. \y. if x = # then y
-         else if y = # then x
-         else x:y) 
-a:b:# c:d:e:#
+let rec append = \x. \y. if x = # then y 
+         else (hd x) append (tl x) y in
+append a:b:# c:d:e:#
