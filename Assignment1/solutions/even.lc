@@ -1,5 +1,5 @@
-let rec even = \x . \y . if x = # then y 
-                             else if y = 0 then even (tl x) S 0
-			     else even (tl x) 0 in
+let rec even = \x . if x = # then S 0 
+                    else if (tl x) = # then 0
+		    else even (tl (tl x)) in
 
-even a1:a2:a3:a4:# (S 0)
+even a1:a2:a3:a4:#
