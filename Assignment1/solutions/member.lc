@@ -1,4 +1,8 @@
-let rec member = \x. \y. if hd y = x then S 0 
-                                       else if y = # then 0
-				       else member x (tl y) in
+let rec member = \x. \y. if y = # then 0 
+                         else if hd y = x then S 0
+			 else member x (tl y) in
+
 member g a:b:c:d:e:#
+//member b a:b:c:d:e:#
+//member a #
+//member # #

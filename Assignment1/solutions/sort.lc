@@ -14,3 +14,7 @@ let rec append = \x. \y. if x = # then y
                          else (hd x) : (append (tl x) y) in
 
 sort S 0:0:S S 0:0:#
+//sort #
+//sort 0:S 0:S S 0:#
+//sort 0:S 0:S S 0:0:#
+//sort S S S 0:S S 0:S 0:0:#

@@ -1,4 +1,6 @@
 let rec length = \x. if x = # then 0 
                      else S (length (tl x)) in
-length a1:a2:a3:a4:a5:#
 
+length a:b:c:d:e:#
+//length a:b:#
+//length #
