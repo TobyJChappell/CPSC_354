@@ -1,16 +1,16 @@
 let rec sort = \x. if x = # then x
-		   else if min (hd x) (tl x) = S 0 then (hd x) (sort (tl x))
-		   else sort ((append (tl x) (hd x)) : #) in 
+		   else if min (hd x) (tl x) = S 0 then (hd x) : (sort (tl x))
+		   else sort (append (tl x) (hd x) : #) in 
 
 let rec min = \x. \y. if y = # then S 0
-		      else if le (x) (hd y) = 0 then 0
-		      else min (x) (tl y) in 
+		      else if le x (hd y) = 0 then 0
+		      else min x (tl y) in 
 
 let rec le = \x. \y. if x = 0 then S 0
                      else if y = 0 then 0
                      else le (minus_one x) (minus_one y) in
 
 let rec append = \x. \y. if x = # then y
-                         else (hd x) (append (tl x) y) in
+                         else (hd x) : (append (tl x) y) in
 
-sort S S 0:S 0:#
+sort S 0:0:S S 0:0:#
