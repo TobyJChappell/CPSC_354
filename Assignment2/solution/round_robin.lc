@@ -19,9 +19,7 @@ val next = \a.
 --    a;;
 
 val delete = \a.
-    let val ptr = new [] in
-    ptr := a;
-    a := next(next(ptr));
+--    next(a) := next(next(a));
     a;;
 
 val get = \a.
@@ -31,8 +29,8 @@ val get = \a.
 
 val update = \e. \a.
     case !a of {
-    [e',a'] -> e' := e
-    }
+    [e',a'] -> a := [e, a']
+    };
     a;;
 
 -- after completing the functions above
