@@ -4,32 +4,40 @@ val newCList = \e.
     a;;
 
 -- complete the following functions
-
--- val insert = \e. \a. 
-
--- val delete = \a. 
-
 val next = \a.
     case !a of {
-        "NULL" -> "Empty list",
-         _ -> a := a'
+        [e,a'] -> a := a'
+		}
+		a;;
+
+val insert = \e. \a.
+    let val ptr = new [] in
+		let val a' = new [] in
+		a' := [e,a'];
+    ptr := a;
+		a := a';
+		a' := next(ptr);
+    a;;
+
+val delete = \a.
+   let val ptr = new [] in
+   ptr := a;
+	 a := next(next(ptr));
+	 a;;
+
+val get = \a.
+    case !a of {
+		   [e,a'] -> e
     } ;;
 
-val get = \a. 
+val update = \e. \a.
     case !a of {
-        "NULL" -> "Empty list",
-	[e,a'] -> e
-    } ;;
-
-val update = \e. \a. 
-    case !a of {
-        "NULL" -> "Empty list",
-        -- _ -> [e2,a'] := [e,a']
-        -- [e2,a'] -> e2 := e
-    } ;;
+		    [e',a'] -> e' := e
+		}
+		e';;
 
 -- after completing the functions above
--- the code below should run 
+-- the code below should run
 
 rec roundRobin = \ts. \a. case ts of {
     [] -> a,
@@ -50,15 +58,15 @@ rec roundRobin = \ts. \a. case ts of {
     )
 };;
 
-rec toListAux = \h. \b. case b == h of { 
+rec toListAux = \h. \b. case b == h of {
         true -> [] ,
         false -> case !b of {
             [v, b'] -> v : (toListAux h b')
-        } 
+        }
 };;
 
 val cListToList = \a. case !a of {
-    [v, a'] -> v : (toListAux a a') 
+    [v, a'] -> v : (toListAux a a')
 };;
 
 val testRRobin = \ts. cListToList (roundRobin ts (newCList 0));;
@@ -76,5 +84,3 @@ val test3 = (testRRobin [addTask 6, tick, tick]) == [4];;
 val test4 = (testRRobin [addTask 6, tick, tick,addTask 5]) == [5,4];;
 
 val test5 = (testRRobin [addTask 6, tick, tick,addTask 5,tick]) == [3,5];;
-
-
