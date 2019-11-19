@@ -6,35 +6,35 @@ val newCList = \e.
 -- complete the following functions
 val next = \a.
     case !a of {
-        [e,a'] -> a := a'
-		}
-		a;;
+    [e,a'] -> a := a'
+    }
+    a;;
 
 val insert = \e. \a.
     let val ptr = new [] in
-		let val a' = new [] in
-		a' := [e,a'];
+    let val a' = new [] in
+    a' := [e,a'];
     ptr := a;
-		a := a';
-		a' := next(ptr);
+    a := a';
+    a' := next(ptr);
     a;;
 
 val delete = \a.
-   let val ptr = new [] in
-   ptr := a;
-	 a := next(next(ptr));
-	 a;;
+    let val ptr = new [] in
+    ptr := a;
+    a := next(next(ptr));
+    a;;
 
 val get = \a.
     case !a of {
-		   [e,a'] -> e
+    [e,a'] -> e
     } ;;
 
 val update = \e. \a.
     case !a of {
-		    [e',a'] -> e' := e
-		}
-		e';;
+    [e',a'] -> e' := e
+    }
+    a;;
 
 -- after completing the functions above
 -- the code below should run
