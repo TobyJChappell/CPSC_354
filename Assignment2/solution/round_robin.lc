@@ -9,17 +9,21 @@ val next = \a.
     [e,a'] -> a'    
     };;
 
---val insert = \e. \a.
---    let val ptr = new [] in
---    let val a' = new [] in
---    a' := [e,a'];
---    ptr := a;
---    a := a';
---    a' := next(ptr);
---    a;;
+val insert = \e. \a.
+    let val a' = new [] in
+    a' := [e,a'];
+    case !a' of {
+    [e,a'] -> a' := [e,next(a)]
+    };
+    case !a of {
+    [e',a] -> a := [e',a']
+    };
+    a;;
 
 val delete = \a.
---    next(a) := next(next(a));
+    case !a of {
+    [e,a'] -> a' := [e',next(next(a'))]
+    };
     a;;
 
 val get = \a.

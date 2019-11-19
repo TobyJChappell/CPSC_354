@@ -1,0 +1,48 @@
+:q
+testRRobin [addTask 6,tick,tick,addTask 5,tick,tick,tick];;
+testRRobin [addTask 6,tick,tick,addTask 5,tick];;
+testRRobin [addTask 6,tick,tick,addTask 5];;
+testRRobin [addTask 6,tick,tick];;
+testRRobin [addTask 6];;
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:q
+:wq
+:load round_robin.lc 
+:q
+:wq
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:quit
+:load round_robin.lc 
+:q
+:load round_robin.lc 
+:quit
+:load round_robin.lc 
+:quit
+:load round_robin.lc 
+:quit
+:load round_robin.lc 
+:quit
+:load round_robin.lc 
+:setLang LamMem
