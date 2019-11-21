@@ -17,6 +17,7 @@ import Data.Text(Text)
 import Data.List(intersect, intercalate)
 import Data.Map(toList, insert)
 import Data.String.Conv(toS)
+import Data.Set(fromList, member)
 
 
 -- MONAD
@@ -62,18 +63,18 @@ instance Eq Value where
   Cons h1 t1 == Cons h2 t2 = h1 == h2 && t1 == t2
   _ == _ = False
 
-instance Show Value where
-  show (IntVal n) = show n
-  show (BoolVal b) = if b then "true" else "false"
-  show (StrVal s) = toS s
-  show (Addr a) = "<address " ++ show a ++ ">"
-  show Nil = "[]"
-  show (Cons h t) = "[" ++ show h ++ shtail t ++ "]"
-    where 
-      shtail Nil = ""
-      shtail (Cons h' t') = ", " ++ show h' ++ shtail t'
-      shtail _ = error "undefined behaviour in shtail"
-  show (Function _) = "<function>"
+showVal _ (IntVal n) = show n
+showVal _ (BoolVal b) = if b then "true" else "false"
+showVal True (StrVal s) = toS s
+showVal False (StrVal s) = show s
+showVal _ (Addr a) = "<address " ++ show a ++ ">"
+showVal _ Nil = "[]"
+showVal b (Cons h t) = "[" ++ showVal b h ++ shtail b t ++ "]"
+  where 
+    shtail _ Nil = ""
+    shtail b (Cons h' t') = ", " ++ showVal b h' ++ shtail b t'
+    shtail _ _ = error "undefined behaviour in shtail"
+showVal _ (Function _) = "<function>"
 
 type Env = Environment Value
 type Mem = Memory Value
@@ -185,7 +186,8 @@ instance Interpreter 'LamMem where
         case a of IntVal _ -> BoolVal True; _ -> BoolVal False),
       pureprim "head" (\ (Cons h _) -> h),
       pureprim "tail" (\ (Cons _ t) -> t),
-      primitive "print" (\ v -> output (show v) $> (\ () -> result v)),
+      primitive "print" (\ v -> output (showVal True v) $> (\ () -> result v)),
+      primitive "println" (\ v -> output (showVal True v ++ "\n") $> (\ () -> result v)),
       primitive "new" (\ _ -> new $> (\a -> result (Addr a))),
       primitive "!" (\ (Addr a) -> get a)
       ], init_mem)
@@ -195,16 +197,22 @@ instance Interpreter 'LamMem where
       pureprimBin x f = (x, Function (\a -> result (Function (\b -> result (f a b)))))
 
   show_env (LamMemEnv (Env env, Mem (_,mem))) = 
-    "Env:\n" ++
-    (intercalate "\n" $ map (\(k,v) -> show k ++ " -> " ++ show v) $ toList env) ++
+    "Built in functions:\n" ++
+    (intercalate ", " $ map (\(k,v) -> toS k) $ toList builtin) ++
+    "\nEnv:\n" ++
+    (intercalate "\n" $ map (\(k,v) -> toS k ++ " -> " ++ showVal False v) $ filter (\(k,_) -> not $ k `member` builtin_set) $ toList env) ++
     "\nMemory:\n" ++
-    (intercalate "\n" $ map (\(k,v) -> show k ++ " -> " ++ show v) $ toList mem)
+    (intercalate "\n" $ map (\(k,v) -> show k ++ " -> " ++ case v of {Just v' -> showVal False v'; _ -> "un-initialized"}) $ toList mem)
+
+    where
+      LamMemEnv (Env builtin, _) = init_env
+      builtin_set = fromList $ map fst $ toList builtin
 
   runProg [] env = return env
   runProg (Calculate_ e:xs) (LamMemEnv (env, mem), rawEnv) = do
     let (out, v, !mem') = eval e env mem
     putStrLn $ out
-    putStrLn $ show v
+    putStrLn $ showVal False v
     runProg xs (LamMemEnv (env, mem'), rawEnv)
   runProg (Define_ def:xs) (LamMemEnv (env, mem), rawEnv) = do
     let (out, env', !mem') = elab def env mem

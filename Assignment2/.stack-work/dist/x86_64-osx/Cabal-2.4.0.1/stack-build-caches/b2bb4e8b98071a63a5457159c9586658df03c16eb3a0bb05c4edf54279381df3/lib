@@ -23,9 +23,9 @@
   size: 974
   modtime: 1574116451
 /Users/tobychappell/Documents/CPSC_Courses/CPSC_354/Assignment2/src/LamMemInterpreter.hs:
-  hash: c36e34dcb2f4f09aaa7712baf3bb6d84d68879185936350a86e3fdbc45e14c59
-  size: 7155
-  modtime: 1574116451
+  hash: 86304216f713eb0ae8271a651da71bbd1fef0810d4543cad01501377eb645992
+  size: 7665
+  modtime: 1574289777
 /Users/tobychappell/Documents/CPSC_Courses/CPSC_354/Assignment2/src/LamFunParser.hs:
   hash: 27af1b72976599b0e4009b9200db2e00f9158c8d989493801934386ab316102e
   size: 8186
@@ -55,9 +55,9 @@
   size: 54
   modtime: 1574116451
 /Users/tobychappell/Documents/CPSC_Courses/CPSC_354/Assignment2/README.md:
-  hash: 75164e08c6cce0ddb877d07b4adfe5faed51efec8d6b45af4496bc96aaf9230a
-  size: 4655
-  modtime: 1574116451
+  hash: 9e4d6009352e752ef9c00057ca77d39adfc884cbf26b335a6c1d8cf75a97c766
+  size: 4810
+  modtime: 1574289777
 /Users/tobychappell/Documents/CPSC_Courses/CPSC_354/Assignment2/src/Environment.hs:
   hash: d10dc55d4bbad3d0c1878ad972ad90d654826e046d6e7e5d20e4fa506246df44
   size: 1343
