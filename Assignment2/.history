@@ -1,1 +1,7 @@
+:q
+testAll [];;
+:load solution/round_robin.lc 
+:q
+testAll [];;
+:load solution/round_robin.lc 
 :setLang LamMem
