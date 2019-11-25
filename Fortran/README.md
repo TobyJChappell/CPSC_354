@@ -20,11 +20,12 @@
 * .neqv.
 
 ## Declaration
-> *data type* :: *variable name*
+Declared using the following line:
+`data type :: variable name`
 
 ## Arrays in Fortran
 Declared using the following line:
-> *data type*, dimension(*size*) :: *variable name*
+`data type, dimension(size) :: variable name`
 
 ## The Basic Syntax of Fortran
 * Use ‘!’ to comment
