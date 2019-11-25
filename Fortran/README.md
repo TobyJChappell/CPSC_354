@@ -21,7 +21,7 @@
 
 ## Assignment
 <pre>
-<i>data type</i> :: <i>variable name</i>
+<b>data type</b> :: <b>variable name</b>
 <pre>
 
 ## Arrays in Fortran
