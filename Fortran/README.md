@@ -19,17 +19,16 @@
 * .eqv.
 * .neqv.
 
-## Assignment
+## Declaration
 > *data type* :: *variable name*
-
 
 ## Arrays in Fortran
 Declared using the following line:
 > *data type*, dimension(*size*) :: *variable name*
 
 ## The Basic Syntax of Fortran
-* ‘!’ to comment
-* ‘=’ for assignment
+* Use ‘!’ to comment
+* Use ‘=’ for assignment
 
 ### Main Program Syntax
 ```
