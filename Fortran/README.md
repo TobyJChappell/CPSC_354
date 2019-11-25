@@ -33,16 +33,20 @@
 
 ### Main Program Syntax
 '''
-PROGRAM program_name
-IMPLICIT none      
-! type declaration statements      
-! executable statements  
-END PROGRAM program_name
+{
+	PROGRAM program_name
+	IMPLICIT none      
+	! type declaration statements      
+	! executable statements  
+	END PROGRAM program_name
+}
 '''
 ### Method Syntax
 '''
-SUBROUTINE method_name(<paramemter_name>)
-IMPLICIT none
-…
-END SUBROUTINE method_name
+{
+	SUBROUTINE method_name(<paramemter_name>)
+	IMPLICIT none
+	! code
+	END SUBROUTINE method_name
+}
 '''
