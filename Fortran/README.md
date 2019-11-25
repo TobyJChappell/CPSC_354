@@ -15,8 +15,6 @@
  * Characters or strings
 > NOTE: Names are case insensitive and have a max length of 31 characters
 
-<data_type> “::” <variable_name>
-
 ## Logical Operators
 * .and.
 * .or.
@@ -24,8 +22,12 @@
 * .eqv.
 * .neqv.
 
+## Assignment
+> *data type* :: *variable name*
+
 ## Arrays in Fortran
-* <data_type> dimension()
+Declared using the following line:
+> *data type*, dimension(*size*) :: *variable name*
 
 ## The Basic Syntax of Fortran
 * ‘!’ to comment
@@ -46,3 +48,7 @@ IMPLICIT none
 ! code
 END SUBROUTINE method_name
 ```
+
+## Parallelism
+
+`gfortran -fopenmp parallel.f90 -o parallel.exe`
