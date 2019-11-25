@@ -20,7 +20,7 @@
 * .neqv.
 
 ## Assignment
-`<i>data type<i> :: <i>variable name<i>`
+<pre><i>data type<i> :: <i>variable name<i><pre>
 
 ## Arrays in Fortran
 Declared using the following line:
