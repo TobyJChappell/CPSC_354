@@ -73,13 +73,23 @@ Although Fortran seems outdated by other, more sophisticated programming languag
 
 ## Works Cited
 https://www.electronicdesign.com/compilers/whats-difference-between-fortran-now-and-then
+
 http://moreisdifferent.com/2015/07/16/why-physicsts-still-use-fortran/
+
 http://www.chem.ox.ac.uk/fortran/fortran1.html
+
 https://www.tutorialspoint.com/fortran/fortran_overview.htm
+
 https://modelingguru.nasa.gov/docs/DOC-1762
+
 https://people.sc.fsu.edu/~jburkardt/f_src/openmp/dot_product_openmp.f90
+
 https://www.britannica.com/technology/FORTRAN
+
 https://jblevins.org/log/openmp
+
 https://www.openmp.org/wp-content/uploads/F95_OpenMPv1_v2.pdf
+
 https://www.thoughtco.com/history-of-fortran-1991415
+
 https://ourcodingclub.github.io/2018/07/30/fortran-intro.html#understanding
