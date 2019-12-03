@@ -66,6 +66,7 @@ A common use of Fortran is to implement and use matrices. The reason for this is
 Fortran is also useful when people are writing code that is meant to run over a long period of time due to the fact that Fortran will be readable for decades into the future. This is a result of the well knownness of the language as well as the simplicity in the code. Fortran is one of the oldest programming languages to date, meaning that it contains a large amount of libraries.
 
 ## Current Uses
+Although FORTRAN seems outdated by other, more sophisticated programming languages, it is still widely used in large scale scientific calculation applications. For example, Software for NASA probes Voyager 1 and Voyager 2 was originally written in FORTRAN 5, and later ported to FORTRAN 77. NASA continues to write some software in Fortran even as recently as of September 2013. Fortran is the language of choice when it comes to large scale simulation physical systems. In the field of High Performance computing (HPC), Fortran, along with C++ are the only two languages in use today. Fortran has now been in use for several decades and there is a vast body of Fortran software in daily use throughout the scientific and engineering communities. 
 
 ## Works Cited
 
