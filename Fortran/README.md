@@ -48,7 +48,9 @@ END SUBROUTINE method_name
 
 ## History
 John Backus created Fortran –  or Formula Translation –  in 1957 on behalf of IBM (International Business Machines); the development of Fortran shortened the process of programming and made computer-programming in general more accessible (Britannica). Prior to the development of Fortran, computer programmers had to write computer programs using machine language (a first-level language) or assembly language (a second-level language). In an effort to bypass the “arduous nature” of such computer-programming, Backus led a team of 10 IBM employees in developing the Fortran computer programming language – a language that combined equations from algebra with a form of English shorthand writing.
+
 The development of Fortran enabled the further rapid development of computer programs that ran nearly as efficiently as programs that had arduously been compiled in hand-written machine code. Fortran became the first-choice programming language by the 1950s, mainly due to the fact that it allowed the efficient creation of programs that ran as efficiently as machine-coded programs.
+
 Developers updated Fortran multiple times in the 1950s and 1960s. FORTRAN 77 was released in 1978 and  FORTRAN 90 was released in 1991 (and was further updated in the 1990s). FORTRANA 90 added various sorts of threading. Today, FORTRAN has been mainly displaced by fourth and fifth-generation languages in the academic field, though it is still implemented in several fields/areas of study. FORTRAN 77, FORTRAN 90, and FORTRAN 95 remain the Fortran versions still in use today.
 
 ## Advantages
