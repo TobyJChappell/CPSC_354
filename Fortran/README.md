@@ -1,6 +1,6 @@
 # Fortran
 Group Members: Joshua Barrs, Toby Chappell, Alex Jones, Jin Jung, and Rose Ramirez
-[Presentation Link](https://docs.google.com/presentation/d/1K62LHEmTwz9L9m_X7Wj9Fya9YRvVLo_lGcWOvilyDNY/edit?usp=sharing)
+Presentation Link: https://docs.google.com/presentation/d/1K62LHEmTwz9L9m_X7Wj9Fya9YRvVLo_lGcWOvilyDNY/edit?usp=sharing)
 > NOTE: To compile/run fortran, type “gfortran <filename>” to compile a fortran program assuming gcc is installed. File extensions are “.f”, “.f90”, or “.f95” depending on the version you want to compile with. Alternatively, fortran can be compiled using "ifort".
 
 ## Data Types Supported by Fortran
