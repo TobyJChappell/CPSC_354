@@ -26,6 +26,9 @@ Group Members: Joshua Barrs, Toby Chappell, Alex Jones, Jin Jung, and Rose Ramir
 * Use `=` for assignment
 * Declare variables by: `data type :: variable name`
 * Declare arrays by: `data type, dimension(size) :: variable name`
+* A program should begin with `PROGRAM program_name` and end with `END PROGRAM program_name`
+* A method should begin with `SUBROUTINE method_name(parameter_name)` and end with `END SUBROUTINE method_name`
+* Specify `IMPLICIT none` to ignore built in integer assignments to certain variables
 
 ### Main Program Syntax
 ```
@@ -37,7 +40,7 @@ END PROGRAM program_name
 ```
 ### Method Syntax
 ```
-SUBROUTINE method_name(<paramemter_name>)
+SUBROUTINE method_name(paramemter_name)
 IMPLICIT none
 ! code
 END SUBROUTINE method_name
