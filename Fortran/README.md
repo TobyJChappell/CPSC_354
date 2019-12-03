@@ -1,6 +1,6 @@
 # Fortran
+Group Members: Joshua Barrs, Toby Chappell, Alex Jones, Jin Jung, and Rose Ramirez
 [Presentation Link](https://docs.google.com/presentation/d/1K62LHEmTwz9L9m_X7Wj9Fya9YRvVLo_lGcWOvilyDNY/edit?usp=sharing)
-
 > NOTE: To compile/run fortran, type “gfortran <filename>” to compile a fortran program assuming gcc is installed. File extensions are “.f”, “.f90”, or “.f95” depending on the version you want to compile with. Alternatively, fortran can be compiled using "ifort".
 
 ## Data Types Supported by Fortran
@@ -26,7 +26,6 @@
 * Declare variables by: `data type :: variable name`
 * Declare arrays by: `data type, dimension(size) :: variable name`
 
-
 ### Main Program Syntax
 ```
 PROGRAM program_name
@@ -45,13 +44,16 @@ END SUBROUTINE method_name
 **Example:** Run `gfortran helloworld.f95 -o helloworld.exe` to compile and `./helloworld.exe` to execute
 
 ## Why We Chose Fortran
+Fortran is very important to the development of programming languages as it is the first successful high-level language. This language was developed using high-level language (HLL), which means the syntax is written in words that humans use, then a compiler translates the HLL to machine code. This was intentional so that scientific programmers, such as physicists and other engineers could have an easier time learning to program in this language. Fortran has been described as having the appearance of “human-language”. This is beneficial as Fortran is primarily used in numerical and scientific computing as seen in weather forecasting, financial trading, and engineering simulation.
+
+Although Fortran is 40 years, it still remains the top language in scientific and industrial programming. Along with being one of the oldest programming languages still used today, it also played a role in technology evolution. For example, Fortran was used in the early development of video games, air traffic control systems, payroll calculations, and military applications. Fortran lead to the growth of these useful applications. The invention of Fortran, not only advanced technology and systems used daily, but also sparked the growth of programming languages in general. Fortran was not the first attempt at using a compiler, but it was the first high-level language that successfully translated HLL to machine code using a compiler. With this achievement, other high-level languages started to be developed based off these concepts.
 
 ## History
-John Backus created Fortran –  or Formula Translation –  in 1957 on behalf of IBM (International Business Machines); the development of Fortran shortened the process of programming and made computer-programming in general more accessible (Britannica). Prior to the development of Fortran, computer programmers had to write computer programs using machine language (a first-level language) or assembly language (a second-level language). In an effort to bypass the “arduous nature” of such computer-programming, Backus led a team of 10 IBM employees in developing the Fortran computer programming language – a language that combined equations from algebra with a form of English shorthand writing.
+John Backus created Fortran – or Formula Translation – in 1957 on behalf of IBM (International Business Machines); the development of Fortran shortened the process of programming and made computer-programming in general more accessible (Britannica). Prior to the development of Fortran, computer programmers had to write computer programs using machine language (a first-level language) or assembly language (a second-level language). In an effort to bypass the arduous nature of such computer-programming, Backus led a team of 10 IBM employees in developing the Fortran computer programming language – a language that combined equations from algebra with a form of English shorthand writing.
 
-The development of Fortran enabled the further rapid development of computer programs that ran nearly as efficiently as programs that had arduously been compiled in hand-written machine code. Fortran became the first-choice programming language by the 1950s, mainly due to the fact that it allowed the efficient creation of programs that ran as efficiently as machine-coded programs.
+The development of Fortran enabled the further rapid development of computer programs that ran nearly as efficiently as programs that had arduously been compiled in hand-written machine code. Fortran became the first-choice programming language by the 1950s, mainly due to the fact that it allowed the efficient creation of programs without the need for difficult hand-written computations.
 
-Developers updated Fortran multiple times in the 1950s and 1960s. FORTRAN 77 was released in 1978 and  FORTRAN 90 was released in 1991 (and was further updated in the 1990s). FORTRANA 90 added various sorts of threading. Today, FORTRAN has been mainly displaced by fourth and fifth-generation languages in the academic field, though it is still implemented in several fields/areas of study. FORTRAN 77, FORTRAN 90, and FORTRAN 95 remain the Fortran versions still in use today.
+Developers updated Fortran multiple times in the 1950s and 1960s. FORTRAN 77 was released in 1978 and added strings as a distinct type. FORTRAN 90 was released in 1991 (and was further updated in the 1990s) and added various sorts of threading and direct-array processing. Today, FORTRAN has been mainly displaced by fourth and fifth-generation languages in the academic field, though it is still implemented in several fields/areas of study. FORTRAN 77, FORTRAN 90, and FORTRAN 95 remain the Fortran versions still in use today.
 
 ## Advantages
 ### Scientific Computing
@@ -66,9 +68,9 @@ A common use of Fortran is to implement and use matrices. The reason for this is
 Fortran is also useful when people are writing code that is meant to run over a long period of time due to the fact that Fortran will be readable for decades into the future. This is a result of the well knownness of the language as well as the simplicity in the code. Fortran is one of the oldest programming languages to date, meaning that it contains a large amount of libraries.
 
 ## Current Uses
+Although Fortran seems outdated by other, more sophisticated programming languages, it is still widely used in large scale scientific calculation applications. For example, Software for NASA probes Voyager 1 and Voyager 2 was originally written in FORTRAN 5, and later ported to FORTRAN 77. NASA continues to write some software in Fortran even as recently as of September 2013. Fortran is the language of choice when it comes to large scale simulation physical systems. In the field of High-Performance Computing (HPC), Fortran, along with C++ are the only two languages in use today. Fortran has now been in use for several decades and there is a vast body of Fortran software in daily use throughout the scientific and engineering communities.
 
 ## Works Cited
-
 https://www.electronicdesign.com/compilers/whats-difference-between-fortran-now-and-then
 http://moreisdifferent.com/2015/07/16/why-physicsts-still-use-fortran/
 http://www.chem.ox.ac.uk/fortran/fortran1.html
