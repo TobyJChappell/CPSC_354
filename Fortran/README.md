@@ -82,7 +82,7 @@ https://www.tutorialspoint.com/fortran/fortran_overview.htm
 
 https://modelingguru.nasa.gov/docs/DOC-1762
 
-https://people.sc.fsu.edu/~jburkardt/f_src/openmp/dot_product_openmp.f90
+https://people.sc.fsu.edu/~jburkardt/f_src/openmp/openmp.html
 
 https://www.britannica.com/technology/FORTRAN
 
